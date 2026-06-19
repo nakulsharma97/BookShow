@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { User, Menu } from "lucide-react";
 import { useAuthStore } from "../services/useAuthStore"; // Corrected import path
@@ -105,17 +105,35 @@ const AuthButtons: React.FC = () => {
 
   return (
     <div style={{ display: "flex", gap: "1rem", alignItems: "center" }}>
-      {user ? ( // Use the user from Zustand store
+            {user ? ( // Use the user from Zustand store
         <>
-          <span style={{ color: "white", fontSize: "0.95rem" }}>
-            Welcome, {user.username || user.email}
-          </span>
+          {/* Avatar with initial */}
+          <div
+            style={{
+              width: "32px",
+              height: "32px",
+              borderRadius: "8px",
+              background: "var(--primary)",
+              color: "white",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              fontWeight: 600,
+              fontSize: "1rem",
+              marginRight: "0.5rem",
+            }}
+          >
+            {(user.username || user.email)?.charAt(0).toUpperCase()}
+          </div>
           <button
             onClick={handleLogout}
             className="btn-primary"
             style={{ padding: "0.6rem 1.5rem", borderRadius: "100px" }}
           >
             Logout
+          </button>
+        </>
+      ) : (
           </button>
         </>
       ) : (

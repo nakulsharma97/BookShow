@@ -126,7 +126,7 @@ const SeatSelection: React.FC = () => {
 
       {/* Summary Footer bar */}
       {selectedSeats.length > 0 && (
-        <div className="glass-effect animate-fade" style={{
+        <div className="glass-effect summary-bar" style={{
           position: 'fixed',
           bottom: '2.5rem',
           left: '50%',
@@ -141,14 +141,14 @@ const SeatSelection: React.FC = () => {
           zIndex: 1001,
           border: '1px solid rgba(225, 29, 72, 0.3)'
         }}>
-          <div style={{ display: 'flex', gap: '2.5rem', alignItems: 'center' }}>
+          <div className="summary-details" style={{ display: 'flex', gap: '2.5rem', alignItems: 'center' }}>
             <div>
               <div style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginBottom: '0.25rem' }}>{selectedSeats.length} Seats</div>
               <div style={{ maxHeight: '40px', overflowX: 'auto', display: 'flex', gap: '0.5rem', color: 'white', fontWeight: 600 }}>
                 {selectedSeats.join(', ')}
               </div>
             </div>
-            <div style={{ height: '40px', width: '1px', background: 'var(--glass-border)' }}></div>
+            <div className="separator" style={{ height: '40px', width: '1px', background: 'var(--glass-border)' }}></div>
             <div>
               <div style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginBottom: '0.25rem' }}>Total Amount</div>
               <div style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--primary)' }}>₹{selectedSeats.length * 280}</div>
@@ -167,6 +167,36 @@ const SeatSelection: React.FC = () => {
           background: var(--primary-muted) !important;
           border-color: var(--primary) !important;
           transform: scale(1.15) translateY(-2px);
+        }
+        @media (max-width: 768px) {
+          .summary-bar {
+            flex-direction: column !important;
+            gap: 1.25rem !important;
+            padding: 1.25rem !important;
+            align-items: center !important;
+            text-align: center !important;
+            bottom: 1.5rem !important;
+            max-width: calc(100% - 2rem) !important;
+          }
+          .summary-details {
+            flex-direction: row !important;
+            gap: 1.5rem !important;
+            justify-content: center !important;
+            width: 100% !important;
+          }
+          .summary-bar button {
+            width: 100% !important;
+            justify-content: center !important;
+          }
+        }
+        @media (max-width: 480px) {
+          .summary-details {
+            flex-direction: column !important;
+            gap: 1rem !important;
+          }
+          .summary-details .separator {
+            display: none !important;
+          }
         }
       `}</style>
     </main>

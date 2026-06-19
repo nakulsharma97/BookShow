@@ -136,6 +136,18 @@ const Login: React.FC = () => {
                     (e.target.style.borderColor = "var(--glass-border)")
                   }
                 />
+                {errors.email && (
+                  <p
+                    style={{
+                      color: "var(--primary)",
+                      fontSize: "0.8rem",
+                      marginTop: "0.25rem",
+                      marginLeft: "0.5rem",
+                    }}
+                  >
+                    {errors.email}
+                  </p>
+                )}
               </div>
             </div>
 
@@ -207,6 +219,18 @@ const Login: React.FC = () => {
                     (e.target.style.borderColor = "var(--glass-border)")
                   }
                 />
+                {errors.password && (
+                  <p
+                    style={{
+                      color: "var(--primary)",
+                      fontSize: "0.8rem",
+                      marginTop: "0.25rem",
+                      marginLeft: "0.5rem",
+                    }}
+                  >
+                    {errors.password}
+                  </p>
+                )}
               </div>
             </div>
 

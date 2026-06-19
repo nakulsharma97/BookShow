@@ -15,10 +15,10 @@ INSERT INTO cities (name, state) VALUES ('Chennai', 'Tamil Nadu');
 select * from users;
 
 -- 2. Users
-INSERT INTO users (name, email, password, phone, created_at) VALUES ('Rahul Sharma', 'rahul@example.com', 'pass123', '9876543210', NOW());
-INSERT INTO users (name, email, password, phone, created_at) VALUES ('Priya Patel', 'priya@example.com', 'pass123', '9876543211', NOW());
-INSERT INTO users (name, email, password, phone, created_at) VALUES ('Amit Kumar', 'amit@example.com', 'pass123', '9876543212', NOW());
-INSERT INTO users (name, email, password, phone, created_at) VALUES ('Sneha Reddy', 'sneha@example.com', 'pass123', '9876543213', NOW());
+INSERT INTO users (name, email, password, phone, created_at) VALUES ('Rahul Sharma', 'rahul@example.com', '$2a$10$wNcsZgZ245f7j4dCst18aOa1/VjCgV59d.ZzG2e3FfO5U2/x0hC1W', '9876543210', NOW());
+INSERT INTO users (name, email, password, phone, created_at) VALUES ('Priya Patel', 'priya@example.com', '$2a$10$wNcsZgZ245f7j4dCst18aOa1/VjCgV59d.ZzG2e3FfO5U2/x0hC1W', '9876543211', NOW());
+INSERT INTO users (name, email, password, phone, created_at) VALUES ('Amit Kumar', 'amit@example.com', '$2a$10$wNcsZgZ245f7j4dCst18aOa1/VjCgV59d.ZzG2e3FfO5U2/x0hC1W', '9876543212', NOW());
+INSERT INTO users (name, email, password, phone, created_at) VALUES ('Sneha Reddy', 'sneha@example.com', '$2a$10$wNcsZgZ245f7j4dCst18aOa1/VjCgV59d.ZzG2e3FfO5U2/x0hC1W', '9876543213', NOW());
 
 -- 3. Movies
 INSERT INTO movies (title, description, genre, language, duration_minutes, rating, release_date, poster_url)

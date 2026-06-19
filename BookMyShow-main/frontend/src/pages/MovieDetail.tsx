@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { MovieAPI } from '../services/api';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import { Calendar, Clock, Play, Star, ChevronLeft, Send, ThumbsUp, Share2, Zap } from 'lucide-react';
+import { Calendar, Clock, Play, Star, ChevronLeft, ThumbsUp, Share2, Zap } from 'lucide-react';
 
 const MovieDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();

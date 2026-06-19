@@ -19,7 +19,7 @@ interface AuthState {
   setError: (error: string | null) => void; // Added setter for error
 }
 
-export const useAuthStore = create<AuthState>((set, get) => ({
+export const useAuthStore = create<AuthState>((set) => ({
   user: null,
   loading: false,
   error: null,

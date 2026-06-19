@@ -21,7 +21,7 @@ INSERT INTO cities (name, state) VALUES
 
 -- 2. Users
 INSERT INTO users (name, email, password, phone, created_at) VALUES 
-('Rajeev Mehra', 'rajeev@example.com', 'pass123', '9999999999', CURRENT_TIMESTAMP);
+('Rajeev Mehra', 'rajeev@example.com', '$2a$10$wNcsZgZ245f7j4dCst18aOa1/VjCgV59d.ZzG2e3FfO5U2/x0hC1W', '9999999999', CURRENT_TIMESTAMP);
 
 -- 3. Movies (Actual Hits with Verified TMDB Posters)
 INSERT INTO movies (title, description, genre, language, duration_minutes, rating, release_date, poster_url) VALUES 

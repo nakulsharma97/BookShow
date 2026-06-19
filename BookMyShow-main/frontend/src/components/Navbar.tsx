@@ -105,7 +105,7 @@ const AuthButtons: React.FC = () => {
 
   return (
     <div style={{ display: "flex", gap: "1rem", alignItems: "center" }}>
-            {user ? ( // Use the user from Zustand store
+      {user ? ( // Use the user from Zustand store
         <>
           {/* Avatar with initial */}
           <div
@@ -133,23 +133,21 @@ const AuthButtons: React.FC = () => {
             Logout
           </button>
         </>
-      ) : (
-          </button>
-        </>
-      ) : (
-        <Link
-          to="/login"
-          className="btn-primary"
-          style={{
-            padding: "0.6rem 1.5rem",
-            borderRadius: "100px",
-            textDecoration: "none",
-          }}
-        >
-          <User size={18} />
-          Login
-        </Link>
-      )}
+      ) :
+        (
+          <Link
+            to="/login"
+            className="btn-primary"
+            style={{
+              padding: "0.6rem 1.5rem",
+              borderRadius: "100px",
+              textDecoration: "none",
+            }}
+          >
+            <User size={18} />
+            Login
+          </Link>
+        )}
       <button
         style={{ background: "none", color: "white", display: "none" }}
         className="mobile-menu"
